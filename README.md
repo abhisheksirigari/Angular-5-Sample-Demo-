@@ -41,18 +41,19 @@ Run the json-server in a terminal and launch the JSON file. The option watch (sh
 ## json-server --watch myJSONfile.json
 Open your browser at the indicated URL. You can find this information in your terminal:
 
-
 Screen shot from my terminal after running the json-server command
 You can try to test the different paths to see how the data are displayed:
 
 http://localhost:3000/pictures
+
 http://localhost:3000/author
+
 http://localhost:3000/comments
+
 Use the backend in your Angular application
 If you have an Angular application, you can use this backend in your service.
 
 Set an URL variable to the localhost url, then use it in your CRUD functionalities for instance:
-
 
 That’s it! You installed a json-server, created a set of mock data and run it!
 Sort, Add, Search, Filter, Delete and Update
@@ -60,20 +61,28 @@ The json-server supports so many features, that I’m often tempted to use it in
 
 ## Basics:
 GET    /pictures
+
 GET    /pictures/1
+
 POST   /pictures
+
 PUT    /pictures/1
+
 PATCH  /pictures/1
+
 DELETE /pictures/1
 
 ## Searching:
 GET /pictures?q=view (full-text search)
+
 GET /pictures?title=A%20natural%20view&author=Lisa
+
 GET /posts?id=1&id=2
 GET /pictures?author=Andy
 
 ##  Sorting:
 GET /posts?_sort=author&_order=asc
+
 And much more: Relationships, Slicing, Pagination, Expanding, Collapsing…
 
 It’s even possible to configure your own routes in a separate file, and you can even load json-server in your own node backend to add permission handling. (Be aware of the risk of data loss.)
